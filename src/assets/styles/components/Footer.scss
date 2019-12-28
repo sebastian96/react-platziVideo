@@ -1,0 +1,16 @@
+.footer {
+    height: 10vh;
+    background: #834DFC;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & > a {
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        padding-left: 30px; 
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

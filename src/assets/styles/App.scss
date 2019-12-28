@@ -1,4 +1,22 @@
-body {
+@import "./Vars.scss";
+
+* {
     margin: 0;
-    background: rgb(192, 94, 94);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $main-color;
+    font-family: $theme-font;
+    font-size: 17px;
+}
+
+.main {
+    width: 100vw;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }

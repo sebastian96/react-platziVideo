@@ -1,0 +1,26 @@
+.search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    &__title {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    &__input {
+        width: 80%;
+        margin-top: 30px;
+        border: 2px solid #fff;
+        border-radius: 35px;
+        color: #fff;
+        height: 40px;
+        padding: 0 20px;
+        background: rgba(144, 966, 252, .2);
+        font-family: 'Muli', sans-serif;
+        outline: none;
+    }
+}
+::placeholder {
+    color: #fff;
+}
