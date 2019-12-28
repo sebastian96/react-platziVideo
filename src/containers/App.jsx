@@ -25,16 +25,11 @@ const App = () => (
                 <Carousel>
                     <CarouselItem />
                     <CarouselItem />
-                    <CarouselItem />
-                    <CarouselItem />
                 </Carousel>
             </Categories>
 
             <Categories title="Lo mas nuevo">
                 <Carousel>
-                    <CarouselItem />
-                    <CarouselItem />
-                    <CarouselItem />
                     <CarouselItem />
                 </Carousel>
             </Categories>
