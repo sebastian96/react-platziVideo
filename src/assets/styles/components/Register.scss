@@ -84,14 +84,9 @@
             font-size: 1.1rem;
             font-weight: bold;
             color: #fff;
-        }
-    }
-}
-.containerLogin {
-    .header {
-        background: #21C08B;
-        &__menu {
-            display: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

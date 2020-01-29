@@ -1,14 +1,3 @@
-.notFound {
-    .header {
-        background: #834DFC;
-        &__menu {
-            display: none;
-        }
-    }
-    .footer {
-        background: #21C08B;
-    }
-}
 .pageError {
     background: linear-gradient(#834DFC, #21C08B);
     height: calc(90vh - 80px);
