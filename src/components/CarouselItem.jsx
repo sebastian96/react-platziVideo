@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import { setFavorite, deleteFavorite } from '../actions';
-
 import play from '../assets/static/play.png';
 import plus from '../assets/static/plus.png';
 import remove from '../assets/static/remove.png';
-
 import '../assets/styles/components/CarouselItem.scss';
 
 const CarouselItem = (props) => {
@@ -21,12 +20,22 @@ const CarouselItem = (props) => {
             <img className="carousel__item--poster" src={cover} alt="Avengers end game" />
             <div className="carousel__item--details">
                 <div className="icons">
-                    <img src={play} alt="Ver pelicula" />
+                    <Link to={`/player/${id}`}>
+                        <img src={play} alt="Ver pelicula" />
+                    </Link>
 
                     {isList ? 
-                        <img src={remove} alt="Eliminar de favoritos" onClick={() => handleDeleteFavorite(id)} />
+                        <img 
+                            src={remove} 
+                            alt="Eliminar de favoritos" 
+                            onClick={() => handleDeleteFavorite(id)} 
+                        />
                         :
-                        <img src={plus} alt="Agregar a favoritos" onClick={handleSetFavorite} />
+                        <img 
+                            src={plus} 
+                            alt="Agregar a favoritos" 
+                            onClick={handleSetFavorite} 
+                        />
                     }
                 </div>
                 <p className="title">{title}</p>

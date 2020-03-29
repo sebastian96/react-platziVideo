@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
-
-import '../assets/styles/components/Login.scss';
+import Header from '../components/Header';
 import google from '../assets/static/google.png';
 import twitter from '../assets/static/twitter.png';
+import '../assets/styles/components/Login.scss';
 
 const Login = props => {
     const [form, setValues] = useState({
