@@ -44,6 +44,33 @@ const reducer = (state, action) => {
                 || state.originals.find(item => item.id === Number(action.payload))
                 || []
             }
+        case 'SEARCH_VIDEO':
+            const findVideo = () => {
+                let find = [];
+
+                state.trends.forEach(e => {
+                    const title = e.title.toLowerCase();
+                    if(title.search(action.payload.toLowerCase()) !== -1) {
+                        find.push(e);
+                    }
+                })
+                state.originals.forEach(e => {
+                    const title = e.title.toLowerCase();
+                    if(title.search(action.payload.toLowerCase()) !== -1) {
+                        find.push(e);
+                    }
+                })
+
+                if(action.payload === '') {
+                    return find = undefined;
+                }
+
+                return find;
+            }
+            return {
+                ...state,
+                find: findVideo()
+            }
         default:
             return state;
     }

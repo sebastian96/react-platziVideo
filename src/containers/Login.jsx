@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
-import Header from '../components/Header';
 import google from '../assets/static/google.png';
 import twitter from '../assets/static/twitter.png';
 import '../assets/styles/components/Login.scss';

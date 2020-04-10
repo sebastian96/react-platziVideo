@@ -6,38 +6,52 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import '../assets/styles/App.scss';
 
-const Home = ({mylist, trends, originals}) => {
+const Home = props => {
+    const {mylist, trends, originals, find} = props;
+
     return (
         <>
             <main className="main">
                 <Search />
-
-                {mylist.length > 0 &&
-                    <Categories title="Mi lista">
+                {find ? 
+                    <Categories title="Encontrados">
                         <Carousel>
-                            {mylist.map(item => 
+                            {find.map(item => 
                                 <CarouselItem key={item.id} {...item} isList/>
                             )}
                         </Carousel>
                     </Categories>
+                    :
+                    <>
+                        {mylist.length > 0 &&
+                            <Categories title="Mi lista">
+                                <Carousel>
+                                    {mylist.map(item => 
+                                        <CarouselItem key={item.id} {...item} isList/>
+                                    )}
+                                </Carousel>
+                            </Categories>
+                        }
+
+                        <Categories title="Lo mas visto">
+                            <Carousel>
+                                {trends.map(item =>
+                                    <CarouselItem key={item.id} {...item} />
+                                )}
+                            </Carousel>
+                        </Categories>
+
+
+                        <Categories title="Lo mas nuevo">
+                            <Carousel>
+                                {originals.map(item => 
+                                    <CarouselItem key={item.id} {...item} />
+                                )}
+                            </Carousel>
+                        </Categories>
+                    </>
                 }
 
-                <Categories title="Lo mas visto">
-                    <Carousel>
-                        {trends.map(item =>
-                            <CarouselItem key={item.id} {...item} />
-                        )}
-                    </Carousel>
-                </Categories>
-
-
-                <Categories title="Lo mas nuevo">
-                    <Carousel>
-                        {originals.map(item => 
-                            <CarouselItem key={item.id} {...item} />
-                        )}
-                    </Carousel>
-                </Categories>
             </main>
         </>
     );
@@ -47,7 +61,8 @@ const mapStateToProps = state => {
     return {
         mylist: state.mylist,
         trends: state.trends,
-        originals: state.originals
+        originals: state.originals,
+        find: state.find
     }
 }
 
