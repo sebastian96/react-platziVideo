@@ -1,0 +1,15 @@
+.pageError {
+    background: linear-gradient(#834DFC, #21C08B);
+    height: calc(90vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    &__title {
+        font-size: 8rem;
+    }
+    &__text {
+        font-size: 2rem;
+    }
+}

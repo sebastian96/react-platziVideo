@@ -1,4 +1,8 @@
 .header {
+    &.is_login,
+    &.is_register {
+        background: #21C08B;
+    }
     width: 100%;
     height: 80px;
     display: flex;
@@ -25,6 +29,9 @@
         }
         &--profile {
             vertical-align: top;
+            border-radius: 50%;
+            max-width: 50px;
+            max-height: 50px;
         }
         &--items {
             display: none;

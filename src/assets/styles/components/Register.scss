@@ -1,0 +1,92 @@
+.register {
+    background: linear-gradient(#21C08B, #834DFC);
+    min-height: calc(90vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    &__container {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid #fff;
+        border-radius: 40px;
+        color: #fff;
+        padding: 60px 68px 40px;
+        min-height: 700px;
+        width: 443px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &--input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #fff;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 0px 20px;
+            height: 50px;
+            color: #fff;
+            font-family: 'Muli', sans-serif;
+            font-size: 1rem;
+        }
+        &--btn {
+            border-radius: 25px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            height: 50px;
+            letter-spacing: 1px;
+            margin: 10px 0px;
+            font-family: 'Muli', sans-serif;
+        }
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        color: #fff;
+        a {
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__socialMedia {
+        a {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #fff;
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__back{
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,4 +1,7 @@
 .footer {
+    &.notFound {
+        background: #21C08B;
+    }
     height: 10vh;
     background: #834DFC;
     display: flex;
